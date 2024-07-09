@@ -1,0 +1,203 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes for Failed to commit area from 0x0000000702800000 to 0x0000000712600000 of length 266338304.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3386), pid=20128, tid=12308
+#
+# JRE version:  (11.0.18+10) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.18+10, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -ea -Dmaven.compiler.source=1.8 -Dmaven.compiler.target=1.8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -Dtmc.test_class_dir=E:\Mooc\mooc-java-programming-i\part04-Part04_31.SportStatistics\src\test\java -Dtmc.results_file=E:\Mooc\mooc-java-programming-i\part04-Part04_31.SportStatistics\target\test_output.txt fi.helsinki.cs.tmc.testrunner.Main SportStatisticTest.games1{04-31.1} SportStatisticTest.games2{04-31.1} SportStatisticTest.games3{04-31.1} SportStatisticTest.winsAndLosses1{04-31.2} SportStatisticTest.winsAndLosses2{04-31.2} SportStatisticTest.winsAndLosses3{04-31.2}
+
+Host: Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz, 8 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.1344)
+Time: Tue Mar 28 14:17:11 2023 Nepal Standard Time elapsed time: 0.013250 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000017b55ab3000):  JavaThread "Unknown thread" [_thread_in_vm, id=12308, stack(0x000000462cb00000,0x000000462cc00000)]
+
+Stack: [0x000000462cb00000,0x000000462cc00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x64f2aa]
+V  [jvm.dll+0x7e2769]
+V  [jvm.dll+0x7e3e69]
+V  [jvm.dll+0x7e4553]
+V  [jvm.dll+0x26af95]
+V  [jvm.dll+0x64c4c9]
+V  [jvm.dll+0x640a25]
+V  [jvm.dll+0x326c1c]
+V  [jvm.dll+0x326aa2]
+V  [jvm.dll+0x32b696]
+V  [jvm.dll+0x3738c2]
+V  [jvm.dll+0x373310]
+V  [jvm.dll+0x3023c8]
+V  [jvm.dll+0x3034c5]
+V  [jvm.dll+0x7bb917]
+V  [jvm.dll+0x7bd0df]
+V  [jvm.dll+0x380c99]
+V  [jvm.dll+0x79dc7f]
+V  [jvm.dll+0x3f1dc7]
+V  [jvm.dll+0x3f42b1]
+C  [jli.dll+0x52c7]
+C  [ucrtbase.dll+0x29363]
+C  [KERNEL32.DLL+0x126bd]
+C  [ntdll.dll+0x5a9f8]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000017b53999a60, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000017b55acc800 GCTaskThread "GC Thread#0" [stack: 0x000000462cc00000,0x000000462cd00000] [id=22080]
+  0x0000017b55b29800 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000462cd00000,0x000000462ce00000] [id=8632]
+  0x0000017b55b2d000 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000462ce00000,0x000000462cf00000] [id=10068]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fff8f062de7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000017b55ab0320] Heap_lock - owner thread: 0x0000017b55ab3000
+
+Heap address: 0x0000000702800000, size: 4056 MB, Compressed Oops mode: Non-zero based: 0x0000000702800000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.009 Loaded shared library C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff783ce0000 - 0x00007ff783ced000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin\java.exe
+0x00007fffeab70000 - 0x00007fffead84000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fffe95d0000 - 0x00007fffe9693000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fffe8230000 - 0x00007fffe85cc000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fffe8740000 - 0x00007fffe8851000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fffdd430000 - 0x00007fffdd449000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin\VCRUNTIME140.dll
+0x00007fffdccc0000 - 0x00007fffdccd7000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin\jli.dll
+0x00007fffe9fa0000 - 0x00007fffea14d000 	C:\WINDOWS\System32\USER32.dll
+0x00007fffe8200000 - 0x00007fffe8226000 	C:\WINDOWS\System32\win32u.dll
+0x00007fffd2720000 - 0x00007fffd29ae000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.608_none_a9444ca7c10bb01d\COMCTL32.dll
+0x00007fffe8aa0000 - 0x00007fffe8ac9000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fffe9e10000 - 0x00007fffe9eb7000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fffe8860000 - 0x00007fffe8973000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fffe7fb0000 - 0x00007fffe804a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fffea160000 - 0x00007fffea191000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007fffdd410000 - 0x00007fffdd41c000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin\vcruntime140_1.dll
+0x00007fffda0b0000 - 0x00007fffda141000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin\msvcp140.dll
+0x00007fff8ed50000 - 0x00007fff8f90a000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin\server\jvm.dll
+0x00007fffe9520000 - 0x00007fffe95ce000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fffe9d00000 - 0x00007fffe9da4000 	C:\WINDOWS\System32\sechost.dll
+0x00007fffe8cc0000 - 0x00007fffe8dd5000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fffe8de0000 - 0x00007fffe8de8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007fffc9120000 - 0x00007fffc9129000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007fffe1450000 - 0x00007fffe145a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fffe1ef0000 - 0x00007fffe1f24000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fffeaab0000 - 0x00007fffeab21000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fffe7060000 - 0x00007fffe7078000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007fffdd300000 - 0x00007fffdd310000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin\verify.dll
+0x00007fffe5440000 - 0x00007fffe566e000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007fffe9190000 - 0x00007fffe9519000 	C:\WINDOWS\System32\combase.dll
+0x00007fffe96a0000 - 0x00007fffe9777000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007fffc88a0000 - 0x00007fffc88d2000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007fffe8180000 - 0x00007fffe81fb000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007fffdd3e0000 - 0x00007fffdd408000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin\java.dll
+0x00007fffdd2f0000 - 0x00007fffdd2fa000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin\jimage.dll
+0x00007fffdccf0000 - 0x00007fffdcd08000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.608_none_a9444ca7c10bb01d;C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin\server
+
+VM Arguments:
+jvm_args: -ea -Dmaven.compiler.source=1.8 -Dmaven.compiler.target=1.8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -Dtmc.test_class_dir=E:\Mooc\mooc-java-programming-i\part04-Part04_31.SportStatistics\src\test\java -Dtmc.results_file=E:\Mooc\mooc-java-programming-i\part04-Part04_31.SportStatistics\target\test_output.txt 
+java_command: fi.helsinki.cs.tmc.testrunner.Main SportStatisticTest.games1{04-31.1} SportStatisticTest.games2{04-31.1} SportStatisticTest.games3{04-31.1} SportStatisticTest.winsAndLosses1{04-31.2} SportStatisticTest.winsAndLosses2{04-31.2} SportStatisticTest.winsAndLosses3{04-31.2}
+java_class_path (initial): C:\Users\Meelan\.m2\repository\fi\helsinki\cs\tmc\tmc-junit-runner\0.2.8\tmc-junit-runner-0.2.8.jar;E:\Mooc\mooc-java-programming-i\part04-Part04_31.SportStatistics\target\test-classes;E:\Mooc\mooc-java-programming-i\part04-Part04_31.SportStatistics\target\classes;C:\Users\Meelan\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Meelan\.m2\repository\fi\helsinki\cs\tmc\edu-test-utils\0.4.2\edu-test-utils-0.4.2.jar;C:\Users\Meelan\.m2\repository\junit\junit\4.12\junit-4.12.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 266338304                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4253024256                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7549744                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 244108496                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 0                                      {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool TieredCompilation                        = true                                   {pd product} {command line}
+     intx TieredStopAtLevel                        = 1                                         {product} {command line}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\
+CLASSPATH=C:\Users\Meelan\.m2\repository\fi\helsinki\cs\tmc\tmc-junit-runner\0.2.8\tmc-junit-runner-0.2.8.jar;E:\Mooc\mooc-java-programming-i\part04-Part04_31.SportStatistics\target\test-classes;E:\Mooc\mooc-java-programming-i\part04-Part04_31.SportStatistics\target\classes;C:\Users\Meelan\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Meelan\.m2\repository\fi\helsinki\cs\tmc\edu-test-utils\0.4.2\edu-test-utils-0.4.2.jar;C:\Users\Meelan\.m2\repository\junit\junit\4.12\junit-4.12.jar
+PATH=C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\OracleApp\app\db_home1\bin;C:\Program Files\Java\jdk-19\bin;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\Meelan\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Meelan\AppData\Local\Programs\Python\Python311\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Meelan\AppData\Local\Microsoft\WindowsApps;C:\Users\Meelan\AppData\Local\GitHubDesktop\bin;C:\Users\Meelan\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.1\bin;;
+USERNAME=Meelan
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+TMP=C:\Users\Meelan\AppData\Local\Temp
+TEMP=C:\Users\Meelan\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 11 , 64 bit Build 22621 (10.0.22621.1344)
+OS uptime: 0 days 15:58 hours
+Hyper-V role detected
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 165 stepping 2 microcode 0xe0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 16221M (5145M free)
+TotalPageFile size 18269M (AvailPageFile size 247M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 58M, peak: 312M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.18+10) for windows-amd64 JRE (11.0.18+10), built on Jan 18 2023 04:27:27 by "" with MS VC++ 16.7 (VS2019)
+
+END.
